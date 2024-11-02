@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя стильная страница</title>
+    
+    <!-- Подключение шрифта Montserrat с Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Основной стиль страницы */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Мягкий фон */
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+        }
+        
+        /* Стиль для чисел */
+        .number {
+            font-size: 120px;
+            color: #1a3d7c; /* Насыщенный, но не слишком яркий синий */
+            margin: 0;
+            text-shadow: 0 4px 8px rgba(26, 61, 124, 0.4); /* Тень для объёма */
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards, pulse 3s ease-in-out infinite;
+        }
+
+        /* Стиль для текста "MANGYSTAU" */
+        .mangystau {
+            font-size: 56px;
+            color: #1a3d7c;
+            margin-top: 20px;
+            letter-spacing: 10px; /* Интервалы между буквами */
+            text-shadow: 0 4px 8px rgba(26, 61, 124, 0.3);
+            opacity: 0;
+            animation: fadeIn 3s ease-out forwards, slideIn 4s ease-out;
+        }
+
+        /* Анимация для плавного появления */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Анимация для пульсации чисел */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Анимация для горизонтального появления "MANGYSTAU" */
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Числа с плавной анимацией и тенью -->
+    <div class="number">72</div>
+    <div class="number">92</div>
+
+    <!-- Текст "MANGYSTAU" с анимацией появления -->
+    <div class="mangystau">MANGYSTAU</div>
+</body>
+</html>
